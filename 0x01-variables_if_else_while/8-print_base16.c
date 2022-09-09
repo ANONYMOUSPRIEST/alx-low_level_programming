@@ -3,7 +3,7 @@
 * main - print if the number is positive, zero, or negative
 *
 * Description: using the main description
-* this program prints "[rogramming is positive, zero, or negative
+* this program prints "Programming is positive, zero, or negative
 * Return: 0
 */
 int main(void)
@@ -17,6 +17,6 @@ for (c = 'a'; c <= 'f'; c++)
 {
 	putchar(c);
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
