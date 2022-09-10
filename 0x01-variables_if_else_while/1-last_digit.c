@@ -28,5 +28,6 @@ else if (l == 0)
 else
 {
 	printf("ast digit of %d is %d and is less than 6 and not 0\n", n, l);
+}
 return (0);
 }
