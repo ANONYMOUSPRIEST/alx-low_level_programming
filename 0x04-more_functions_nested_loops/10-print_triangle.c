@@ -1,16 +1,31 @@
 #include <stdio.h>
-#include "main.h"
-
 /**
-*print_triangle - prints a triangle
-*@size:size parameter of triangle
-*Return: returns nothing
-*/
-
+ * print_triangle - print a triangle
+ * Description: The function should print a triangle
+ * @size: the size of a triangle
+ * Return: void
+ */
 void print_triangle(int size)
 {
-	int inc1, inc2;
+	int row, hashes, space;
 
-	if (size > 0)
+	if (size <= 0)
 	{
-
+		_putchar('\n');
+	}
+	else
+	{
+		for (row = 1; row <= size; row++)
+		{
+			for (space = space - row; space >= 1; space--)
+			{
+				_putchar(' ');
+			}
+			for (hashes = 1; hashes <= 1; hashes++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
+}
