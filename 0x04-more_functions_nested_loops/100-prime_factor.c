@@ -41,7 +41,7 @@ int isPrime(long int n)
 	{
 		for (i = 2; i < n; i++)
 		{
-			if (n % 1 == 0)
+			if (n % i == 0)
 			{
 				return (0);
 			}
