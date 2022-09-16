@@ -19,5 +19,7 @@ int _putchar(char);
 int _isupper(int);
 int _isdigit(int);
 int mul(int, int);
-
+int isPrime(long int n);
+long int biggestFactor(long int a);
+int numDigits(int n);
 #endif /* MAIN_H */
