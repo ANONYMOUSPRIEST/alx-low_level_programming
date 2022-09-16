@@ -67,7 +67,7 @@ long int biggestFactor(long int a)
 		}
 		else
 		{
-			if ((factor % i == 0) && (isprime(i) == 1))
+			if ((factor % i == 0) && (isPrime(i) == 1))
 			{
 				factor = factor / i;
 				continue;
