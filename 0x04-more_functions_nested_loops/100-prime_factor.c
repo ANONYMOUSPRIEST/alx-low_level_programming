@@ -61,7 +61,7 @@ long int biggestFactor(long int a)
 	factor = a;
 	for (i = 2; i <= factor; i++)
 	{
-		if (isprime(factor) == 1)
+		if (isPrime(factor) == 1)
 		{
 			break;
 		}
