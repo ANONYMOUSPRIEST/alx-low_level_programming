@@ -17,7 +17,7 @@ void print_buffer(char *b, int size)
 
 		for (i = 0; i < 10; i++)
 		{
-			if ((i +x) >= size)
+			if ((i + x) >= size)
 				printf("  ");
 
 			else
