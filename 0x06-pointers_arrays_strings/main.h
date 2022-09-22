@@ -2,9 +2,10 @@
 #define MAIN_H
 
 /**
- * main - Header file for prototypes.
- * void - prototypes (void)
- * int - prototypes (int)
+ * File: main.h
+ * Auth: Richard
+ * Desc: Header file containing prototypes for all functions
+ *       used in the 0x06.c - more pointers, arrays and strings directory.
  */
 
 int _putchar(char c);
