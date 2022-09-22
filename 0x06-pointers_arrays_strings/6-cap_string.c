@@ -8,7 +8,7 @@
  */
 char *cap_string(char *a)
 {
-	char seperator[] = "\t\n,;.!?\"(){}";
+	char separator[] = " \t\n,;.!?\"(){}";
 	int i, j;
 
 	for (i = 0; a[i] != '\0'; i++)
@@ -20,9 +20,9 @@ char *cap_string(char *a)
 
 			else
 			{
-				for (j = 0; seperator[j] != '\0'; j++)
+				for (j = 0; separator[j] != '\0'; j++)
 				{
-					if (a[i - 1] == seperator[j])
+					if (a[i - 1] == separator[j])
 						a[i] -= 32;
 				}
 			}
