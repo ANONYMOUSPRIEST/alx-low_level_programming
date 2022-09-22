@@ -22,5 +22,5 @@ char *string_toupper(char *s1)
 				s1[i] = l[k];
 		}
 	}
-        return (s1);
-}	
+return (s1);
+}
