@@ -19,7 +19,7 @@ int is_palindrome(char *s)
  * @s: string to be checked
  * @start: start index
  * @end: end index
- * @flag: flag to indicate f a string is a palindrome
+ * @flag: flag to indicate if a string is a palindrome
  *
  * Return: void
  */
