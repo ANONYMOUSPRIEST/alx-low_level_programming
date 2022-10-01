@@ -4,7 +4,7 @@
 /**
  * main - prints coins left
  * @args: paramater entry
- * @argc: one number of arguments
+ * @argv: one number of arguments
  * Return: zero onOne number of argumetsr
  */
 
