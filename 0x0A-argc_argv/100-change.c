@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main- prints coins left
+ * main - prints coins left
  * @args: paramater entry
  * @argc: one number of arguments
  * Return: zero onOne number of argumetsr
