@@ -1,15 +1,14 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two string
- * @s1: first string to copy
- * @s2: second string to copy
- * @n: number of bytes of s2 to copy
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: index
  *
- * Return: char pointer to newly allocated place in memory
+ * Return: char pointer
  */
-char *string_noncat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, k;
 	char *s;
