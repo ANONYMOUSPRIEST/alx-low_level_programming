@@ -1,15 +1,16 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * int_dog - initializes a variable of type struct dog
- * @d: the dog to be initialized
- * @name: the name of the dog
- * @age: the age of the dog
- * @owner: the owner of the dog
+ *init_dog - initialize a variable of type struct dog
+ * @d: array
+ * @name: name
+ * @age: age
+ * @owner: owner
+ * Description: this struct is for dog
  */
 
-void int_dog(struct dog *d, char *name, float age, char *owner)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d != NULL)
 	{
