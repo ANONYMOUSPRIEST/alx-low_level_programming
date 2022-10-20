@@ -10,5 +10,5 @@ void __attribute__((constructor)) hare(void);
 void hare(void)
 {
 	printf("you're beat! and yet, you must allow,");
-	printf("\n1 bore my house upon my back!\n");
+	printf("\nI bore my house upon my back!\n");
 }
