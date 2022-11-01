@@ -2,34 +2,31 @@
 
 /**
  * append_text_to_file - appends text at the end of a file
- * @filename: a pointer to the name of the file
- * @text_content: the string to add to the end of the file
+ * @filename: pointer to name of file to create
+ * @text_content: pointer to a NULL terminated string to write to the file
  *
- * Return: if the function fails or filename d NULL - -1
- * if the file does not exist the user lacks write permissions - -1
- * otherwise - 1
+ * Return: 1 on success, -1 on failure
  */
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int o, w, len = 0;
+	int file_d, size;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	/* open file in append mode */
+	file_d = open(filename, O_RDWR | O_APPEND);
+	if (file_d == -1)
+		return (-1);
+
+	if (text_content)
 	{
-		for (len = 0; text_content[len];)
-			len++;
+		for (size = 0; text_content[size] != '\0'; size++)
+			;
+		write(file_d, text_content, size);
 	}
 
-	o = open(filename, O_WRONLY | O_APPEND);
-	w = write(o, text_content, len);
-
-	if (o == -1 || w == -1)
-		return (-1);
-
-	close(o);
-
-	return (-1);
+	close(file_d);
+	return (1);
 }
