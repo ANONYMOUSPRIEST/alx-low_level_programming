@@ -2,33 +2,30 @@
 
 /**
  * create_file - creates a file
- * @filename: a pointer to the name of the file to create
- * @text_content: a pointer to a string to write to the file
+ * @filename: pointer to name of file to create
+ * @text_content: pointer to a NULL terminated string to write to the file
  *
- * Return: if the function fails - -1,
- * otherwise - 1
+ * Return: 1 on sccess, -1 on failure
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int o, w, len = 0;
+	int file_d, size;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	/* add rw------- permission, it exists truncate it*/
+	file_d = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (file_d == 1)
+		return (-1);
+	if (text_content)
 	{
-		for (len = 0; text_content[len];)
-			len++;
+		for (size = 0; text_content[size] != '\0'; size++)
+			;
+		write(file_d, text_content, size);
 	}
-
-	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0000);
-	w = write(o, text_content, len);
-
-	if (o == -1 || w == -1)
-		return (-1);
-
-	close(o);
+	close(file_d);
 
 	return (1);
 }
